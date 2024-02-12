@@ -57,6 +57,7 @@ nav {
         opacity: 1;
       }
     }
+
     &:after {
       content: '';
       font-size: 9px;
@@ -69,6 +70,7 @@ nav {
       opacity: 0;
       transition: all 0.3s ease-out;
     }
+
     &:first-child {
       &::after {
         content: 'HOME';
@@ -77,22 +79,45 @@ nav {
   }
 
 
-a.about-link {
-  &::after {
-    content: 'ABOUT';
+  a.about-link {
+    &::after {
+      content: 'ABOUT';
+    }
+  }
+
+  a.contact-link {
+    &::after {
+      content: 'CONTACT';
+    }
+  }
+
+  a.active {
+    svg {
+      color: #C3A456;
+    }
   }
 }
 
-a.contact-link {
-  &::after {
-    content: 'CONTACT';
-  }
-}
+ul {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: block;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin: 0;
 
-a.active {
-  svg {
-    color: #C3A456;
-  }
-}
+  li {
+    a {
+      padding: 7px 0;
+      display: block;
+      font-size: 15px;
+      line-height: 16px;
 
+      &:hover svg {
+        color: #C3A456;
+      }
+    }
+  }
 }
